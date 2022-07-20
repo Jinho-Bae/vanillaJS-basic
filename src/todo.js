@@ -15,7 +15,7 @@ const img_thx = "EE6756AC-6A9A-40B4-842A-27EFD941F425.jpeg";
 
 const LOVE = "love";
 const MISS = "miss";
-const THANKS = "thanks";
+const THANKS = "thank";
 
 function saveToDos() {
   localStorage.setItem(TODO_KEY, JSON.stringify(toDos));
