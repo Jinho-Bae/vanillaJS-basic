@@ -76,7 +76,12 @@ function setBackgroundImage(todo) {
   else if (todo.includes(THANKS)) imgVar = img_thx;
   else if (todo.includes(MISS)) imgVar = img_miss;
 
-  if (imgVar) document.body.style.backgroundImage = `url(img/${imgVar})`;
+  if (imgVar) {
+    const bodyStyle = document.body.style;
+    bodyStyle.backgroundImage = `url(img/${imgVar})`;
+    bodyStyle.backgroundSize = "cover";
+    bodyStyle.backgroundRepeat = "no-repeat";
+  }
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
