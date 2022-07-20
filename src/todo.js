@@ -71,12 +71,12 @@ function handleToDoSubmit(event) {
 }
 
 function setBackgroundImage(todo) {
-  if (todo.includes(LOVE))
-    document.body.style.backgroundImage = `url(img/${img_love})`;
-  else if (todo.includes(THANKS))
-    document.body.style.backgroundImage = `url(img/${img_thx})`;
-  else if (todo.includes(MISS))
-    document.body.style.backgroundImage = `url(img/${img_miss})`;
+  let imgVar;
+  if (todo.includes(LOVE)) imgVar = img_love;
+  else if (todo.includes(THANKS)) imgVar = img_thx;
+  else if (todo.includes(MISS)) imgVar = img_miss;
+
+  if (imgVar) document.body.style.backgroundImage = `url(img/${imgVar})`;
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
